@@ -8,6 +8,9 @@ UserSearchTerm = input('Enter search criteria: ')
 def scraper(term, URL, URL_search):
     r = requests.get(URL_search + term)
     soup = BeautifulSoup(r.text, 'html.parser')
+    #The below line will need to be changed to mirror a text file on the users system
+    #This will be updated to form a general use case in the future
+    #This line will needed to be altered in multiple places in this script
     with open('/home/marketechbarry/Python/Projects/links.txt', 'w') as f:
         for link in soup.find_all('a'):
             f.write(link.get('href'))
