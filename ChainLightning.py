@@ -34,7 +34,7 @@ def LSJ():
             soup = BeautifulSoup(r.text, 'html.parser')
             print('*' * 50)
             print(soup.title.string)
-            print('URL: ' + line)
+            print('URL: ' + URL + entry)
 
 def WLNS():
     print('WLNS results below: ')
@@ -59,7 +59,7 @@ def WLNS():
                 soup = BeautifulSoup(r.text, 'html.parser')
                 print('*' * 50)
                 print(soup.title.string)
-                print('URL: ' + line)
+                print('URL: ' + entry)
 WLNS()
 LSJ()
                 
